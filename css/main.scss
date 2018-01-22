@@ -1,0 +1,308 @@
+body {
+  background-size: cover;
+  background-image: url(../img/stormy_clouds.jpg);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+button {
+  opacity: 0.8;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.list {
+  border-bottom: 2px dotted rgba(255, 255, 255, .12);
+  overflow: hidden;
+  white-space: nowrap;
+  height: 2.1em;
+}
+
+.cityForecast {
+  line-height: 2.1em;
+}
+
+.wrapper {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+
+  .appsName {
+    transition: box-shadow .5s;
+    display: block;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .54);
+    text-align: center;
+
+    .title {
+      font-size: 2.2em;
+      color: #fff;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, .54);
+      line-height: 2em;
+
+    }
+  }
+
+  .searchContainer {
+    text-align: center;
+    margin-top: 4%;
+
+    .additionalBtn {
+      display: inline-block;
+      margin-right: 5px;
+
+      .addFuncBtn {
+        background-color: rgba(0, 0, 0, .54);
+        border-width: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: inline-block;
+        border-radius: 4px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        vertical-align: middle;
+        outline: none;
+
+        .favoriteCity {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .enterWeather {
+      display: inline-block;
+      width: 400px;
+      height: 32px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      padding: 3px 10px;
+      font-weight: 300;
+      border-radius: 4px;
+    }
+
+    .searchWeather__button {
+      display: inline-block;
+      background-color: #3775dd;
+      box-shadow: 0 2px #21487f;
+      border-color: transparent;
+      color: #fff;
+      font-size: 1em;
+      line-height: 32px;
+      margin-left: 5px;
+      margin-right: 0;
+      min-width: 92px;
+      padding-left: 14px;
+      padding-right: 14px;
+      text-align: center;
+      font-weight: 300;
+      outline: none;
+      box-sizing: content-box;
+      border-radius: 4px;
+      cursor: pointer;
+      vertical-align: top;
+    }
+
+  }
+
+  .weatherInfo {
+    display: none;
+
+    .currentCityWeather {
+      display: block;
+      text-align: center;
+      margin-top: 4%;
+      color: #fff;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.54);
+
+      .currentCityName {
+        font-size: 3em;
+        font-weight: 400;
+        display: inline-block;
+        max-width: 600px;
+        white-space: nowrap;
+        overflow: hidden;
+        overflow-wrap: break-word;
+      }
+      .currentRegion {
+        font-size: 1.5em;
+        font-weight: 100;
+        line-height: 1.7em;
+      }
+
+      .currentDate {
+        display: block;
+        font-weight: 100;
+        font-size: 1em;
+
+      }
+
+      .weatherDescription {
+
+        .weatherIcon {
+          vertical-align: bottom;
+        }
+        .description {
+          font-size: 1.6em;
+          font-weight: 400;
+        }
+      }
+      .temperature {
+        display: inline-block;
+        font-weight: 100;
+        margin-top: 1em;
+        .temperatureValue {
+          font-size: 7em;
+        }
+        .degreeIcon {
+          vertical-align: top;
+          font-size: 7em;
+        }
+      }
+      .unit-control {
+        display: inline-block;
+        margin-left: -2px;
+        cursor: pointer;
+
+        .measure {
+          border-color: transparent;
+          text-transform: capitalize;
+          background-color: transparent;
+          padding: 1px;
+          outline: none;
+          display: block;
+          font-size: 1.6em;
+          font-weight: 300;
+          color: #fff;
+          cursor: pointer;
+
+        }
+        .inactive {
+          color: #878c93;
+        }
+      }
+    }
+
+    .detailedInfo {
+      //display: none;
+      display: block;
+      text-align: center;
+      margin-top: 4%;
+
+      .addFuncBlock {
+        display: inline-block;
+        background-color: rgba(0, 0, 0, .54);
+        width: 25%;
+        padding: 10px;
+        margin: 10px;
+        vertical-align: top;
+        text-align: left;
+        height: 288px;
+        overflow: hidden;
+
+        .titleFuncBlock {
+          color: #fff;
+          border-bottom: 1px solid #fff;
+          font-weight: 300;
+          font-size: 1.3em;
+          margin-bottom: 4px;
+          padding-bottom: 4px;
+          line-height: 1.5em;
+        }
+
+        .day {
+          display: block;
+          border: 0;
+          border-bottom: 1px rgba(255, 255, 255, .12) dotted;
+          font-size: 1em;
+          outline: 0;
+          padding-top: 2px;
+          padding-bottom: 2px;
+        }
+
+        .byDays {
+          color: #fff;
+
+          .nameOfTheDay {
+            display: inline-block;
+            vertical-align: middle;
+            width: 25%;
+          }
+          .dayWeatherIcon {
+            display: inline-block;
+            text-align: center;
+            width: 30%;
+          }
+          .humidity {
+            display: inline-block;
+            width: 22%;
+
+            .humidityIcon {
+              width: 24px;
+              height: 24px;
+            }
+            .humidityPercent {
+              display: inline-block;
+              margin: 5px;
+              font-size: 12px;
+              vertical-align: top;
+            }
+          }
+          .temperatureContainer {
+            position: relative;
+            display: inline-block;
+            text-align: right;
+            .dayMinTemp {
+              display: inline-block;
+              min-width: 30px;
+
+              &::after {
+                content: "°";
+                display: block;
+                position: absolute;
+                top: 0px;
+                right: 30px;
+                font-weight: 100;
+                //font-size: 1.2em;
+              }
+            }
+            .dayMaxTemp {
+              position: relative;
+              display: inline-block;
+              padding-left: 10px;
+              min-width: 30px;
+              &::after {
+                content: "°";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: -10px;
+                font-weight: 100;
+                //font-size: 1.2em;
+              }
+            }
+          }
+        }
+
+      }
+
+      .recentHistory {
+        width: 15%;
+        .historyList {
+
+        }
+
+      }
+
+      .favorite {
+        width: 15%;
+      }
+    }
+  }
+
+}
+
+
