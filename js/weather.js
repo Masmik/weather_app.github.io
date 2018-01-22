@@ -108,7 +108,7 @@ var weather = {
 
     getLocationName: function (lat, long) {
         $.ajax({
-            url: 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + long + '&sensor=true',
+            url: 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + lat + ',' + long + '&sensor=true',
             dataType: "json",
             success: function (data) {
                 $('#city-search').val(data.results[0].formatted_address);
@@ -396,6 +396,7 @@ var weather = {
 
         $weeklyForecastContent.empty();
 
+
         for (var i = 0; i < weather.weeklyForecast.length; i++) {
 
             var $byDays = $('<div/>').addClass('byDays');
@@ -419,7 +420,7 @@ var weather = {
                         .attr('alt', "humidity")
                 ).append(
                     $('<span/>').addClass("humidityPercent")
-                        .text(weather.weeklyForecast[i].humidity * 100).append(
+                        .text((weather.weeklyForecast[i].humidity * 100).toFixed(0)).append(
                         $('<span/>').addClass("percentIcon")
                             .text("%")
                     )
