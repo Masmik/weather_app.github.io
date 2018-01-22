@@ -67,8 +67,8 @@ button:hover {
         vertical-align: middle;
         outline: none;
 
-        .favoriteCity {
-          margin-right: 10px;
+        &.findLocation:disabled{
+          opacity: 0.3;
         }
       }
     }

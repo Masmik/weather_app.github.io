@@ -53,8 +53,8 @@ button:hover {
         padding-bottom: 7px;
         vertical-align: middle;
         outline: none; }
-        .wrapper .searchContainer .additionalBtn .addFuncBtn .favoriteCity {
-          margin-right: 10px; }
+        .wrapper .searchContainer .additionalBtn .addFuncBtn.findLocation:disabled {
+          opacity: 0.3; }
     .wrapper .searchContainer .enterWeather {
       display: inline-block;
       width: 400px;

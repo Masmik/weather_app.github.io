@@ -132,6 +132,8 @@ var weather = {
             weather.currentLocation.long = long.toFixed(4);
             weather.currentLocation.isAllowed = true;
 
+            $('.findLocation').prop('disabled', false);
+
         }, function (err) {
             console.warn('err', err);
             weather.currentLocation.isAllowed = false;
